@@ -1,0 +1,5 @@
+<!doctype html><html lang="fr"><meta charset="utf-8"><title>Brave isolé — fixture synthétique</title>
+<h1>Test du pont local</h1><label>Texte de test <input id="message" autocomplete="off"></label>
+<button id="increment">Compteur</button><output id="count">0</output><pre id="value"></pre>
+<iframe title="Cadre de test" srcdoc="<p>Contenu synthétique du cadre</p>"></iframe>
+<script>let count=0;document.querySelector('#increment').onclick=()=>document.querySelector('#count').textContent=String(++count);document.querySelector('#message').oninput=e=>document.querySelector('#value').textContent=e.target.value;</script></html>

@@ -1,0 +1,10 @@
+title = "Brave Isole public key exception"
+[extend]
+useDefault = true
+
+[[allowlists]]
+description = "Only the exact public Chromium SPKI line; not a private key or token"
+condition = "AND"
+paths = ['''^extension/manifest\.json$''']
+regexTarget = "line"
+regexes = ['''^\s*"key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzVveH0vH8EMldHpbfYu39kms0B8wkoQawCB8+f1VLPdFk0G8IIJct4O5iLorFWjoqwr8wl7FJSuA2LXnkI5aH0Gr1XRuHuH+VTRlUUrzn0CoqGF9rDD0lmScR6UzQLItbR5ckOxy5jYdBAbyGL+eBxClp7TNK5pSSO8YBU5YMZ9HlN4qiwHH+PP0vAqCoJ7lY5gfS3rJ1wTODcL0ERMnRWqx672AByOrTCeo908C3Y0xWg/UcZc1+iu7+i8aAP0jvcxFktruSQs57f/1C75vdkjlgwdwUvV7/JgAseM60QfwqcTz1NZKN21xS25ErudBB3EAF08kX2I7OJ96uvWmZwIDAQAB"\s*$''']

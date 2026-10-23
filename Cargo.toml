@@ -1,0 +1,33 @@
+[package]
+name = "brave-isole"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.88"
+description = "Local macOS-sandboxed MCP bridge for background tabs in your existing Brave profile"
+license = "MIT"
+repository = "https://github.com/Mozzzaic/brave-isole"
+keywords = ["mcp", "brave", "browser-automation", "sandbox", "macos"]
+publish = false
+
+[dependencies]
+getrandom = "0.4.3"
+nix = { version = "0.31.3", default-features = false, features = ["socket", "user", "fs", "process"] }
+rmcp = { version = "3.7.0", default-features = false, features = ["server", "transport-io"] }
+schemars = "1.2.3"
+serde = { version = "1.0.229", features = ["derive"] }
+serde_json = "1.0.154"
+sha2 = "0.11.1"
+thiserror = "2.0.21"
+tokio = { version = "1.54.1", features = ["rt-multi-thread", "macros", "time", "io-util", "io-std", "sync"] }
+
+[[bin]]
+name = "brave-isole-probe"
+path = "probe/src/main.rs"
+
+[profile.release]
+lto = true
+codegen-units = 1
+strip = true
+
+[dev-dependencies]
+tokio = { version = "1.54.1", features = ["test-util"] }
