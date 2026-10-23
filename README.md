@@ -61,3 +61,5 @@ The bridge does not ask Brave to take focus. A site may still open a dialog or p
 ## Contribute
 
 Bug reports and small, tested pull requests are welcome. Start with [CONTRIBUTING.md](CONTRIBUTING.md). Please report security issues privately using [SECURITY.md](SECURITY.md). No private account data, cookies, machine receipts or screenshots belong in an issue.
+
+For accurate descriptions and community submission guidance, see the [launch kit](docs/launch-kit.md).
