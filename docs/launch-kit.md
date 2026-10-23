@@ -8,19 +8,22 @@ Brave Isolé is a free, MIT-licensed local MCP bridge for Claude Desktop and Cod
 
 Repository: https://github.com/Mozzzaic/brave-isole
 
-## Show HN draft
+## Hacker News: manual submission brief
 
-**Title:** Show HN: Brave Isolé – background Brave tabs for Claude and Codex on macOS
+Read the [HN guidelines](https://news.ycombinator.com/newsguidelines.html) before posting. They prohibit generated text and automated posting. The earlier AI-written Show HN draft has therefore been removed. Write the title and any introduction yourself, and submit manually from your own account. Do not copy generated launch prose into HN posts or comments.
 
-I wanted assistants to work with my existing browser sessions while I kept using Brave. Keyboard automation kept interrupting what I was doing, so I built a local MCP bridge with assistant-owned background tabs.
+Facts you can verify in the repository while writing your own introduction:
 
-Brave Isolé combines a Manifest V3 extension with signed Rust processes running under macOS App Sandbox. Transport uses native messaging, stdio and authenticated private Unix IPC. There is no bridge telemetry or hosted relay, and the tool API exposes typed browser operations rather than a host shell or arbitrary CDP methods.
+- Existing Brave profile and sessions; assistant-owned background tabs.
+- Claude Desktop and Codex support on macOS; both clients currently required for activation.
+- Rust bridge, Manifest V3 extension, signed app bundle with macOS App Sandbox.
+- Native messaging, stdio and authenticated private Unix IPC; no bridge telemetry or hosted relay.
+- Experimental source release with local signing and verification; no notarized download.
+- The sandbox covers the bridge processes, not the entire assistant. Websites use the network, and cloud model providers can receive returned content.
 
-This is an experimental source-only macOS release. Installation currently requires both Claude Desktop and Codex, local signing and verification. The sandbox covers the bridge processes, not the entire assistant; websites still use the network and content returned to cloud models can reach their providers. The security model and limitations are documented in the repository.
+Link the original source: https://github.com/Mozzzaic/brave-isole
 
-I'd welcome feedback on the installation flow, ownership boundaries and confinement tests.
-
-https://github.com/Mozzzaic/brave-isole
+For a runnable project announcement, the [Show HN rules](https://news.ycombinator.com/showhn.html) call for a title beginning with `Show HN`. The author should be available to discuss their work. Do not solicit votes or automate replies.
 
 ## Product Hunt draft
 
@@ -39,7 +42,7 @@ https://github.com/Mozzzaic/brave-isole
 | GitHub | Existing account; publish repository and source preview | Free public source repository; do not include private installation receipts. |
 | mcp.tc | [Submit the public GitHub URL](https://mcp.tc/submit); no account needed | Free listing submission. A queued submission is not an accepted listing. Describe the native macOS source installation and its limits. |
 | Awesome MCP Servers | GitHub pull request after meeting its current validation requirements | Its [validation workflow](https://github.com/punkpeye/awesome-mcp-servers/blob/main/.github/workflows/check-glama.yml) requests a Glama listing, score badge and working introspection in Docker. Native macOS compatibility needs clarification before submission; do not add a fake badge or bypass activation to satisfy a Linux check. |
-| Hacker News | [Create an account](https://news.ycombinator.com/login), then [submit](https://news.ycombinator.com/submit) | Use the Show HN draft, make the runnable source easy to find and be available to discuss it. Follow the [Show HN rules](https://news.ycombinator.com/showhn.html). Do not solicit votes. |
+| Hacker News | [Create an account](https://news.ycombinator.com/login), then [submit](https://news.ycombinator.com/submit) | Write your own title/introduction and submit manually. The [HN guidelines](https://news.ycombinator.com/newsguidelines.html) prohibit generated text and automated posting. Follow the [Show HN rules](https://news.ycombinator.com/showhn.html); do not solicit votes. |
 | Product Hunt | [Create a free personal account](https://www.producthunt.com/launch/how-product-hunt-works), then prepare a launch | New accounts normally wait one week before posting. See [eligibility](https://help.producthunt.com/en/articles/481909-how-can-i-get-access-to-post) and [launch guide](https://www.producthunt.com/launch). No paid hunter is needed. Do not subscribe to anything merely to bypass the wait. |
 | Glama MCP directory | Sign in with GitHub at [Glama](https://glama.ai/mcp), choose Add MCP Server and submit the public repository | [Submission FAQ](https://glama.ai/mcp/faq); [GitHub permission verification](https://glama.ai/mcp/methodology). Request a directory listing for a local macOS server, not a hosted relay. Automated checks are not a security certification. |
 
